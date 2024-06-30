@@ -5,7 +5,8 @@ import {Keypair , PublicKey} from "@solana/web3.js"
 const ownerKeypair = Keypair.generate()
 const publickey = ownerKeypair.publicKey;
 console.log(publickey.toBase58());
-
+console.log(ownerKeypair.secretKey.toString())
+console.log(ownerKeypair.secretKey.length)
 ownerKeypair.secretKey //  this give you a secret for that public key
 
 // if you dont want to generate the keys again and again we can use our know key

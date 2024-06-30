@@ -1,8 +1,8 @@
 import { Connection, LAMPORTS_PER_SOL, PublicKey, clusterApiUrl } from "@solana/web3.js";
 
-const connection = new Connection(clusterApiUrl("devnet"));  // It returns the URL of the RPC (Remote Procedure Call) endpoint for the specified cluster. In this case, "devnet" refers to the development network of Solana.
+const connection = new Connection("http://localhost:8899");  // It returns the URL of the RPC (Remote Procedure Call) endpoint for the specified cluster. In this case, "devnet" refers to the development network of Solana.
 
-const address = new PublicKey('harTe2QhcHjGiU9MduC8hqbxDrf6YDqdyGSKttAxiwf'); //asigining the new public key to an address
+const address = new PublicKey('harEP3FoiNNLNaCydA1npz5pXgMWN3FoMPurC83Ri1V'); //asigining the new public key to an address
 const balance = await connection.getBalance(address); // fetching the balance or lamports that address have
 const balanceInSol = balance / LAMPORTS_PER_SOL;  // amount of balance in SOL
 
